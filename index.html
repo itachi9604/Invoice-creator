@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="style.css">
+        <title>MOS</title>
+    </head>
+    <body>
+        <div class="ticket">
+            <img src="./logo.png" alt="Logo">
+            <p class="centered">
+                <br>AUTHORISED MAHAVITARAN ENERGY BILL COLLECTION CENTER<hr>
+                </p>
+
+                
+            <table>
+                <thead>
+                    <tr>
+                        <th class="test_rep" colspan=2><span id="serx"></span></th>
+                       
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th class="customer" >Customer Name:</th>
+                        <td class="nam"><span id='name_import'></span></td>
+                    </tr>
+                    <tr>
+                        <th class="mobile"  >Mobile no.:</th>
+                        <td ><span id='mob'></span></td>
+                    </tr>
+                    <tr>
+                        <th class="amt" >Amount:</th>
+                        <td><span id='amnt'></span></td>
+					
+                    </tr>
+				
+                </tbody>
+            </table>
+            
+        </div>
+<tr>
+				<th>.
+</tr>
+
+<tr>
+<th><p id="date"></p>
+	
+				</tr>
+<tr>
+<th><br><br><br>Signature<br><br>
+	
+				</tr>
+<tr>
+				<th>.
+</tr>
+
+<tr>
+<th><br><br>.
+	
+				</tr>
+
+
+        <button id="btnPrint" class="hidden-print" autofocus >Print</button>
+        <script>
+n =  new Date();
+y = n.getFullYear();
+m = n.getMonth() + 1;
+d = n.getDate();
+document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+
+
+
+document.getElementById('name_import').innerHTML=localStorage.getItem('customer_name');
+    document.getElementById('amnt').innerHTML=localStorage.getItem('amount_n');
+    document.getElementById('mob').innerHTML=localStorage.getItem('phone_no');
+    document.getElementById('serx').innerHTML=localStorage.getItem('servce');
+
+
+
+        </script>
+        <script src="script.js"></script>
+    </body>
+</html>

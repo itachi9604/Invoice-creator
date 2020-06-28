@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+              
+        <link rel="stylesheet" href="style0.css">
+        <title>MOS1</title>
+    </head>
+
+    <body>
+        <div class="logos">
+            <table>
+            <td><img src="./logo.png" alt="Logo">
+            <td><img src="./logo2.png" alt="Logo">
+            </table>
+            <h2>AUTHORISED MAHAVITARAN ENERGY BILL COLLECTION CENTER</h2>
+            <h2>BANK OF BARODA CUSTOMER SERVICE POINT</h2>
+
+
+        </div>
+        
+        
+        
+
+        
+
+        <div class="table_data">
+            <table>
+                <thead>
+                    <tr>
+                         <th class="test_rep" colspan="2">         
+                            
+                            <select name="serviceId" id="seviceId" class="drop_down" >
+                              <option value="TESTING">TESTING AND COMPLETION REPORT</option>
+                              <option value="PAN">PAN</option>
+                              <option value="NEW_ACCOUNT">NEW ACCOUNT</option>
+                            </select>     
+                        
+                        
+                        
+                        
+                        
+                        
+                        </th>
+                       
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th class="customer">Customer Name</th>
+                        <td><input type="text" id="serv" name="" value="" placeholder="Name" /></td>
+                        
+                    </tr>
+                    <tr>
+                        <th class="mobile">Mobile no.</th>
+                        <td><input type="number" id="phone" name="" value="" placeholder="Mobile number" maxlength=10 /></td>
+                    </tr>
+                    <tr>
+                        <th class="amt">Amount</th>
+                        <td><input type="text" id="amout" name="" value="" placeholder="Amount"/></td>
+                    </tr>
+                   
+                </tbody>
+            </table>
+            
+        </div> 
+        
+        
+        <div class="submitClass">
+
+            <input class="res_button" type="reset" name="reset_but" value="RESET" onclick="resetfunc()"/>
+
+            <input class="sub_button" type="submit" name="subm" value="Review" onclick="subfunc()"/>
+
+        </div>
+        
+    </body>
+
+
+
+
+
+    <script>
+        
+           
+
+        
+
+        function resetfunc(){
+                document.getElementById("serv").value="";
+
+                document.getElementById("phone").value="";
+
+                document.getElementById("amout").value="";
+
+
+
+        }
+
+        function subfunc(){
+                var name=document.getElementById("serv").value;
+                var amount=document.getElementById("amout").value;
+                var mobile=document.getElementById("phone").value;
+                
+
+                var skillsSelect = document.getElementById("seviceId");
+                var selectedText = skillsSelect.options[skillsSelect.selectedIndex].text;
+                
+
+
+
+                localStorage.setItem('customer_name',name);
+                localStorage.setItem('amount_n',amount);
+                localStorage.setItem('phone_no',mobile);
+                localStorage.setItem('servce',selectedText);
+
+
+                window.location="index.html"
+                
+
+
+
+
+        }
+
+
+    </script>
+</html>
